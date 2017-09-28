@@ -4,6 +4,7 @@
 
 The Manga photo can be downloaded from
 > http://www.cartoonmad.com
+
 automatically.
 
 ## Version describe

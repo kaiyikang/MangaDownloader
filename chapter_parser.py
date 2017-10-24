@@ -19,6 +19,4 @@ class MDParser(object):
             new_full_url = urllib.parse.urljoin(download_url, new_url)
             new_urls.append(new_full_url)
 
-
-
         return new_urls

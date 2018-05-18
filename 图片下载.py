@@ -137,7 +137,6 @@ GientUrl = "http://www.cartoonmad.com/comic/5500.html"
 
 def getBigUrlList(GientUrl):
     htmlext = requests.get(GientUrl).text
-#使用BeautifulSoup模块来解析html源码
     bigUrlList = []
     soup = BeautifulSoup(htmlext,'html.parser')
     numbers = soup.find_all(name = 'a', attrs={"href":re.compile(r'\d{10,15}')})
@@ -146,7 +145,6 @@ def getBigUrlList(GientUrl):
         bigUrlList.append("http://www.cartoonmad.com"+number["href"])
     return bigUrlList
 
-bigUrlList = getBigUrlList(GientUrl)
 path = os.getcwd()
 for BigUrl in bigUrlList:
     photoList = []
